@@ -16,7 +16,7 @@ let getInfo = async(direccion) => {
         let coords = await lugar.getLugarLatLng(direccion);
         let temperatura = await clima.getClima(coords.lat, coords.lng);
 
-        return `El clima en ${coords.direccion} es de ${temperatura}`;
+        return `La temperatura en ${coords.direccion} es de ${temperatura}`;
     } catch (error) {
         return `No se pudo determinar el clima en ${direccion}`;
     }
